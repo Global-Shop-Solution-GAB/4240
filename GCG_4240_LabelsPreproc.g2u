@@ -1,0 +1,752 @@
+Program.Sub.ScreenSU.Start
+Gui.SS_Form1..create
+Gui.SS_Form1..caption("Label Preproc")
+Gui.SS_Form1..size(6160,5910)
+Gui.SS_Form1..position(0,0)
+Gui.SS_Form1..alwaysontop(False)
+Gui.SS_Form1..fontname("Arial")
+Gui.SS_Form1..fontsize(8)
+Gui.SS_Form1..forecolor(0)
+Gui.SS_Form1..BackColor(-2147483633)
+Gui.SS_Form1..controlbox(True)
+Gui.SS_Form1..maxbutton(False)
+Gui.SS_Form1..minbutton(False)
+Gui.SS_Form1..mousepointer(0)
+Gui.SS_Form1..moveable(True)
+Gui.SS_Form1..sizeable(False)
+Gui.SS_Form1..ShowInTaskBar(True)
+Gui.SS_Form1..titlebar(True)
+Gui.SS_Form1..MinX(0)
+Gui.SS_Form1..MinY(0)
+Gui.SS_Form1..Event(UnLoad,SS_Form1_UnLoad)
+Gui.SS_Form1.lbl_txt_BegWC.create(label,"Beginning",True,1800,195,1,105,1050,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txt_BegWC.LabelStretch(True)
+Gui.SS_Form1.txt_Beg.create(textbox,"",True,1800,300,1,105,1260,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txt_Beg.tabstop(True)
+Gui.SS_Form1.txt_Beg.tabindex(4)
+Gui.SS_Form1.cmd_txt_BegBrow.create(button)
+Gui.SS_Form1.cmd_txt_BegBrow.Caption("^")
+Gui.SS_Form1.cmd_txt_BegBrow.visible(True)
+Gui.SS_Form1.cmd_txt_BegBrow.size(330,330)
+Gui.SS_Form1.cmd_txt_BegBrow.position(1980,1260)
+Gui.SS_Form1.cmd_txt_BegBrow.enabled(True)
+Gui.SS_Form1.cmd_txt_BegBrow.fontname("Arial")
+Gui.SS_Form1.cmd_txt_BegBrow.fontsize(8)
+Gui.SS_Form1.cmd_txt_BegBrow.tabstop(True)
+Gui.SS_Form1.cmd_txt_BegBrow.tabindex(5)
+Gui.SS_Form1.cmd_txt_BegBrow.Event(Click,cmd_txt_Beg_Click)
+Gui.SS_Form1.lbl_txt_EndWC.create(label,"Ending",True,1800,195,1,2460,1050,True,0,Arial,8,-2147483633,0)
+Gui.SS_Form1.lbl_txt_EndWC.LabelStretch(True)
+Gui.SS_Form1.txt_End.create(textbox,"",True,1800,300,1,2460,1260,True,0,Arial,8,16777215,1)
+Gui.SS_Form1.txt_End.tabstop(True)
+Gui.SS_Form1.txt_End.tabindex(6)
+Gui.SS_Form1.cmd_txt_EndBrow.create(button)
+Gui.SS_Form1.cmd_txt_EndBrow.Caption("^")
+Gui.SS_Form1.cmd_txt_EndBrow.visible(True)
+Gui.SS_Form1.cmd_txt_EndBrow.size(330,330)
+Gui.SS_Form1.cmd_txt_EndBrow.position(4335,1260)
+Gui.SS_Form1.cmd_txt_EndBrow.enabled(True)
+Gui.SS_Form1.cmd_txt_EndBrow.fontname("Arial")
+Gui.SS_Form1.cmd_txt_EndBrow.fontsize(8)
+Gui.SS_Form1.cmd_txt_EndBrow.tabstop(True)
+Gui.SS_Form1.cmd_txt_EndBrow.tabindex(7)
+Gui.SS_Form1.cmd_txt_EndBrow.Event(Click,cmd_txt_End_Click)
+Gui.SS_Form1.chk_All.create(checkbox)
+Gui.SS_Form1.chk_All.Caption("All")
+Gui.SS_Form1.chk_All.visible(False)
+Gui.SS_Form1.chk_All.size(1800,300)
+Gui.SS_Form1.chk_All.position(105,1620)
+Gui.SS_Form1.chk_All.enabled(True)
+Gui.SS_Form1.chk_All.fontname("Arial")
+Gui.SS_Form1.chk_All.fontsize(8)
+Gui.SS_Form1.chk_All.tabstop(True)
+Gui.SS_Form1.chk_All.tabindex(9)
+Gui.SS_Form1.chk_All.Event(Click,chk_All_Click)
+Gui.SS_Form1.lvw.create(listview)
+Gui.SS_Form1.lvw.view(3)
+Gui.SS_Form1.lvw.visible(True)
+Gui.SS_Form1.lvw.size(5805,2340)
+Gui.SS_Form1.lvw.position(105,1950)
+Gui.SS_Form1.lvw.enabled(True)
+Gui.SS_Form1.lvw.fontname("Arial")
+Gui.SS_Form1.lvw.fontsize(8)
+Gui.SS_Form1.lvw.addlistviewcolumn("Beginning",2705,0)
+Gui.SS_Form1.lvw.addlistviewcolumn("Ending",2705,0)
+Gui.SS_Form1.cmd_lvw_Add.create(button)
+Gui.SS_Form1.cmd_lvw_Add.Caption("Add")
+Gui.SS_Form1.cmd_lvw_Add.visible(True)
+Gui.SS_Form1.cmd_lvw_Add.size(1005,330)
+Gui.SS_Form1.cmd_lvw_Add.position(4815,1260)
+Gui.SS_Form1.cmd_lvw_Add.enabled(True)
+Gui.SS_Form1.cmd_lvw_Add.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_Add.fontsize(8)
+Gui.SS_Form1.cmd_lvw_Add.setinternationalid(7600)
+Gui.SS_Form1.cmd_lvw_Add.tabstop(True)
+Gui.SS_Form1.cmd_lvw_Add.tabindex(8)
+Gui.SS_Form1.cmd_lvw_Add.Event(Click,cmd_lvw_Add_Click)
+Gui.SS_Form1.cmd_lvw_Delete.create(button)
+Gui.SS_Form1.cmd_lvw_Delete.Caption("Delete")
+Gui.SS_Form1.cmd_lvw_Delete.visible(True)
+Gui.SS_Form1.cmd_lvw_Delete.size(1005,330)
+Gui.SS_Form1.cmd_lvw_Delete.position(105,4410)
+Gui.SS_Form1.cmd_lvw_Delete.enabled(True)
+Gui.SS_Form1.cmd_lvw_Delete.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_Delete.fontsize(8)
+Gui.SS_Form1.cmd_lvw_Delete.setinternationalid(171500)
+Gui.SS_Form1.cmd_lvw_Delete.tabstop(True)
+Gui.SS_Form1.cmd_lvw_Delete.tabindex(10)
+Gui.SS_Form1.cmd_lvw_Delete.Event(Click,cmd_lvw_Delete_Click)
+Gui.SS_Form1.cmd_lvw_Clear.create(button)
+Gui.SS_Form1.cmd_lvw_Clear.Caption("Clear")
+Gui.SS_Form1.cmd_lvw_Clear.visible(True)
+Gui.SS_Form1.cmd_lvw_Clear.size(1005,330)
+Gui.SS_Form1.cmd_lvw_Clear.position(1185,4410)
+Gui.SS_Form1.cmd_lvw_Clear.enabled(True)
+Gui.SS_Form1.cmd_lvw_Clear.fontname("Arial")
+Gui.SS_Form1.cmd_lvw_Clear.fontsize(8)
+Gui.SS_Form1.cmd_lvw_Clear.setinternationalid(106700)
+Gui.SS_Form1.cmd_lvw_Clear.tabstop(True)
+Gui.SS_Form1.cmd_lvw_Clear.tabindex(11)
+Gui.SS_Form1.cmd_lvw_Clear.Event(Click,cmd_lvw_Clear_Click)
+Gui.SS_Form1.cmdPrint.create(button)
+Gui.SS_Form1.cmdPrint.Caption("Print")
+Gui.SS_Form1.cmdPrint.visible(True)
+Gui.SS_Form1.cmdPrint.size(1005,360)
+Gui.SS_Form1.cmdPrint.position(105,4935)
+Gui.SS_Form1.cmdPrint.enabled(True)
+Gui.SS_Form1.cmdPrint.fontname("Arial")
+Gui.SS_Form1.cmdPrint.fontsize(8)
+Gui.SS_Form1.cmdPrint.tabstop(True)
+Gui.SS_Form1.cmdPrint.tabindex(12)
+Gui.SS_Form1.cmdPrint.Event(Click,cmdPrint_Click)
+Gui.SS_Form1.optParts.Create(Option)
+Gui.SS_Form1.optParts.Size(1575,255)
+Gui.SS_Form1.optParts.Position(135,255)
+Gui.SS_Form1.optParts.Caption("Partno")
+Gui.SS_Form1.optBin.Create(Option)
+Gui.SS_Form1.optBin.Size(1575,255)
+Gui.SS_Form1.optBin.Position(135,585)
+Gui.SS_Form1.optBin.Caption("Bin")
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.UDT.uLabel.Define("Part",String,"Part")
+Variable.UDT.uLabel.Define("PL",String,"PRODUCT_LINE")
+Variable.UDT.uLabel.Define("Description",String,"Description")
+Variable.UDT.uLabel.Define("Bin",String,"Bin")
+Variable.uGlobal.uLabel.Declare("uLabel")
+
+Variable.UDT.uLabelBin.Define("Part",String,"Part")
+Variable.UDT.uLabelBin.Define("PRODUCT_LINE",String,"PRODUCT_LINE")
+Variable.UDT.uLabelBin.Define("Description",String,"Description")
+Variable.UDT.uLabelBin.Define("Bin",String,"Bin")
+Variable.UDT.uLabelBin.Define("QTY_Reorder",float,"QTY_Reorder")
+Variable.UDT.uLabelBin.Define("description_2",String,"description_2")
+Variable.UDT.uLabelBin.Define("description_3",String,"description_3")
+Variable.UDT.uLabelBin.Define("NAME_VENDOR",String,"NAME_VENDOR")
+Variable.uGlobal.uLabelBin.Declare("uLabelBin")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+V.Global.iKey.Declare(long)
+V.Global.iLogID.Declare(long)
+V.Global.iBIRUNID.Declare(long)
+
+
+
+Function.ODBC.Connection!con.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+
+gui.SS_Form1.optParts.Value(True)
+gui.SS_Form1..Show 
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Main.End
+
+Program.Sub.cmd_txt_Beg_Click.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sReturn.Declare(String)
+
+'set browser type ahead
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'
+
+f.Intrinsic.Control.If(v.Screen.SS_Form1!optBin.Value,=,True)
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		f.Intrinsic.Control.CallSub(Binbrowser)
+		V.Local.sReturn.Set(v.Args.Part01)
+	f.Intrinsic.Control.Else
+		Function.Intrinsic.UI.Browser(150,"",Variable.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sReturn.Set(V.Local.sRet(0))
+	f.Intrinsic.Control.endif	
+f.Intrinsic.Control.Else
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		f.Intrinsic.Control.CallSub(partbrowser)
+		V.Local.sReturn.Set(v.Args.Part01)
+	f.Intrinsic.Control.Else
+		Function.Intrinsic.UI.Browser(105,"",Variable.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sReturn.Set(V.Local.sRet(0))
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.endif
+
+F.Intrinsic.Control.If(V.Local.sReturn,=,"***CANCEL***")
+	Function.Intrinsic.UI.Msgbox("Invalid selection!")
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	gui.SS_Form1.txt_Beg.Text(V.Local.sReturn)
+	F.Intrinsic.Control.If(V.Screen.SS_Form1!txt_End.Text,=,"")
+		gui.SS_Form1.txt_End.Text(V.Local.sReturn)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txt_Beg_Click.End
+
+Program.Sub.cmd_txt_End_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txt_Beg_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sRet.Declare(String)
+V.Local.sReturn.Declare(String)
+	
+'set browser type ahead
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+	
+f.Intrinsic.Control.If(v.Screen.SS_Form1!optBin.Value,=,True)
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		f.Intrinsic.Control.CallSub(Binbrowser)
+		V.Local.sReturn.Set(v.Args.Part01)
+	f.Intrinsic.Control.Else
+		Function.Intrinsic.UI.Browser(150,"",Variable.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sReturn.Set(V.Local.sRet(0))
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.Else
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		f.Intrinsic.Control.CallSub(partbrowser)
+		V.Local.sReturn.Set(v.Args.Part01)
+	f.Intrinsic.Control.Else
+		Function.Intrinsic.UI.Browser(105,"",Variable.Local.sRet)
+		F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+		V.Local.sReturn.Set(V.Local.sRet(0))
+	f.Intrinsic.Control.endif
+f.Intrinsic.Control.endif
+
+
+F.Intrinsic.Control.If(V.Local.sReturn,=,"***CANCEL***")
+	Function.Intrinsic.UI.Msgbox("Invalid selection!")
+	F.Intrinsic.Control.ExitSub
+Function.Intrinsic.Control.Else
+	
+	gui.SS_Form1.txt_End.Text(V.Local.sRet(0))
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt_Beg_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_txt_End_Click.End
+
+Program.Sub.cmd_lvw_Add_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_txt_End_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sBeg.Declare(String)
+V.Local.sEnd.Declare(String)
+
+
+'V.Local.sBeg.Set(V.Screen.SS_Form1!txt_Beg.Text)
+'V.Local.sEnd.Set(V.Screen.SS_Form1!txt_End.Text)
+
+f.Intrinsic.String.Left(V.Screen.SS_Form1!txt_Beg.Text,17,V.Local.sBeg)
+f.Intrinsic.String.Left(V.Screen.SS_Form1!txt_End.Text,17,V.Local.sEnd)
+
+F.Intrinsic.Control.If(V.Local.sBeg.Trim,<>,"","AND",V.Local.sEnd.Trim,<>,"")
+	f.Intrinsic.Control.If(v.Screen.SS_Form1!optParts.Value,=,True)
+		f.Intrinsic.Control.CallSub(Getpartsrev,"part1",V.Local.sBeg,"part2",V.Local.sEnd)
+		V.Local.sBeg.Set(v.Args.Part01)
+		V.Local.sEnd.Set(v.Args.Part02)
+	f.Intrinsic.Control.EndIf 
+
+	F.Intrinsic.Math.Add(V.Global.iKey,1,V.Global.iKey)
+	
+	gui.SS_Form1.lvw.AddListItem(V.Global.iKey,V.Local.sBeg)
+	gui.SS_Form1.lvw.SetListItemSubItemText(V.Global.iKey,1,V.Local.sEnd)
+	gui.SS_Form1.txt_Beg.Text("")
+	gui.SS_Form1.txt_End.Text("")
+	gui.SS_Form1.optParts.Enabled(false)
+	gui.SS_Form1.optBin.Enabled(false)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("You must select a Beginning and End Value.")
+	gui.SS_Form1.txt_Beg.Text("")
+	gui.SS_Form1.txt_End.Text("")
+F.Intrinsic.Control.EndIf
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_txt_End_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_Add_Click.End
+
+Program.Sub.cmd_lvw_Delete_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw_Add_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+V.Local.iKey.Declare(long)
+
+V.Local.iKey.Set(V.Screen.SS_Form1!lvw.SelectedItemKey)
+gui.SS_Form1.lvw.RemoveItem(V.Local.iKey)
+gui.SS_Form1.txt_Beg.SetFocus
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw_Add_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_Delete_Click.End
+
+Program.Sub.cmd_lvw_Clear_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmd_lvw_Delete_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+gui.SS_Form1.optParts.Enabled(True)
+gui.SS_Form1.optBin.Enabled(True)
+
+gui.SS_Form1.lvw.ClearItems
+
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmd_lvw_Delete_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmd_lvw_Clear_Click.End
+
+Program.Sub.cmdPrint_Click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdPrint_Click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+V.Local.i.Declare(Long)
+V.Local.dStart.Declare(Date)
+V.Local.dStop.Declare(Date)
+V.Local.iUB.Declare(Long)
+V.Local.iHours.Declare(Long)
+V.Local.iMinutes.Declare(Long)
+V.Local.sKeys.Declare(String)
+V.Local.iReportID.Declare(Long)
+V.Local.sRptID.Declare(String)
+V.Local.sUdt.Declare(String)
+
+gui.SS_Form1.lvw.RetrieveAllListItems(V.Local.sKeys)
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'
+
+F.Intrinsic.Control.If(V.Local.sKeys(0).Trim,<>,"***NORETURN***","or",V.Screen.SS_Form1!chk_All.Value,=,1)
+	Gui.SS_Form1..Visible(False)
+	F.Intrinsic.UI.InvokeWaitDialog("Please wait while the report is generated.","Generate Report")
+	
+	F.Intrinsic.Control.If(V.Screen.SS_Form1!chk_All.Value,<>,1)
+		f.Intrinsic.Control.CallSub(searchlist)
+	f.Intrinsic.Control.EndIf 
+	
+	F.Global.BI.GetRunID(V.Global.iBIRUNID)
+	F.Global.BI.StartLogging(V.Global.iBIRUNID,-1,-1,"",V.Global.iLogID)
+	
+
+
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		V.Local.sRptID.set("GCG_4240_KANBANBarcode.lab")
+	f.Intrinsic.Control.Else
+		V.Local.sRptID.set("GCG_4240_SHELFPLBarcode.lab")
+	f.Intrinsic.Control.EndIf 
+	F.Global.BI.GetIDFromName(V.Local.sRptID,V.Local.sRptID)
+	F.Global.BI.GetRunID(V.Global.iBIRunID)
+	F.Global.BI.StartLogging(V.Global.iBIRunID,V.Local.sRptID,0,"",V.Global.iLogID)
+	
+      'Stopping Logging
+    F.Global.BI.StopLogging(V.Global.iLogID)
+
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		F.Global.BI.PrintCodesoftLabelFromUDT(V.Global.iBIRunID,V.Global.iLogID,"uGlobal.uLabelBin","","",True)
+	f.Intrinsic.Control.Else
+		F.Global.BI.PrintCodesoftLabelFromUDT(V.Global.iBIRunID,V.Global.iLogID,"uGlobal.uLabel","","",True)
+	f.Intrinsic.Control.EndIf 
+	
+'	
+	f.Intrinsic.Control.CallSub(ss_form1_unload)
+
+
+'	F.Intrinsic.Control.CallSub(Callbi)
+f.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("You must select at least one range")
+f.Intrinsic.Control.EndIf 
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("cmdPrint_Click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.cmdPrint_Click.End
+
+Program.Sub.SS_Form1_UnLoad.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+f.ODBC.Connection!con.Close 
+f.Intrinsic.Control.End 
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SS_Form1_UnLoad.End
+
+Program.Sub.chk_All_Click.Start
+F.Intrinsic.Control.SetErrorHandler("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+
+
+
+F.Intrinsic.Control.If(V.Screen.SS_Form1!chk_All.Value,=,1)
+	gui.SS_Form1.txt_Beg.Enabled(False)
+	gui.SS_Form1.txt_End.Enabled(False)
+	gui.SS_Form1.txt_Beg.Text("")
+	gui.SS_Form1.txt_End.Text("")
+	gui.SS_Form1.cmd_txt_BegBrow.Enabled(False)
+	gui.SS_Form1.cmd_txt_EndBrow.Enabled(False)
+	gui.SS_Form1.cmd_lvw_Add.Enabled(False)
+	gui.SS_Form1.cmd_lvw_Clear.Enabled(False)
+	gui.SS_Form1.cmd_lvw_Delete.Enabled(False)
+	gui.SS_Form1.lvw.Enabled(False)
+	gui.SS_Form1.lvw.ClearItems
+F.Intrinsic.Control.Else
+	gui.SS_Form1.txt_Beg.Enabled(True)
+	gui.SS_Form1.txt_End.Enabled(True)
+	gui.SS_Form1.cmd_txt_BegBrow.Enabled(True)
+	gui.SS_Form1.cmd_txt_EndBrow.Enabled(True)
+	gui.SS_Form1.cmd_lvw_Add.Enabled(True)
+	gui.SS_Form1.cmd_lvw_Clear.Enabled(True)
+	gui.SS_Form1.cmd_lvw_Delete.Enabled(True)
+	gui.SS_Form1.lvw.Enabled(True)
+F.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SS_Form1_UnLoad_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.chk_All_Click.End
+
+Program.Sub.SearchList.Start
+F.Intrinsic.Control.SetErrorHandler("SearchList_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sList.Declare(String)
+V.Local.sValues.Declare(String)
+V.Local.i.Declare(Long)
+V.Local.iOrd.Declare(Long)
+V.Local.iUB.Declare(Long)
+V.local.sSQL.Declare(string)
+V.local.sfld.Declare(string)
+
+
+gui.SS_Form1.lvw.RetrieveAllListItems(V.Local.sList)
+F.Intrinsic.String.Split(V.Local.sList,"*!*",V.Local.sList)
+
+F.Intrinsic.Control.If(v.Screen.SS_Form1!optBin.Value ,=,True)
+	V.local.sfld.Set("Bin")
+f.Intrinsic.Control.Else
+	V.local.sfld.Set("Part")
+F.Intrinsic.Control.EndIf
+
+
+F.Intrinsic.Control.For(V.Local.i,V.Local.sList.LBound,V.Local.sList.UBound,1)
+	gui.SS_Form1.lvw.ListitemKeyToOrdinal(V.Local.sList(V.Local.i),V.Local.iOrd)
+	V.Local.sValues.Set(V.Screen.SS_Form1!lvw.ListItemTextExtended(V.Local.iOrd))
+	F.Intrinsic.String.Split(V.Local.sValues,"*!*",V.Local.sValues)
+	V.Local.sValues.RedimPreserve(0,1)
+	F.Intrinsic.String.SortAsc(V.Local.sValues,V.Local.sValues)
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		V.uGlobal.uLabelBin.Redim(-1,-1)
+		F.Intrinsic.String.Build("select distinct A.Part as Part,Bin,product_line,description,QTY_Reorder,description_2,description_3,NAME_VENDOR from INVENTORY_MSTR A join INVENTORY_MST2 B on A.part = B.part and A.location = B.location Where {0} BETWEEN '{1}' AND '{2}'",V.Local.sfld,V.Local.sValues(0),V.Local.sValues(1),V.local.sSQL)
+	f.Intrinsic.Control.Else
+		V.uGlobal.uLabel.Redim(-1,-1)
+		F.Intrinsic.String.Build("Select distinct Part, bin, product_line,description from v_INVENTORY_MSTR where {0} BETWEEN '{1}' AND '{2}'",V.Local.sfld,V.Local.sValues(0),V.Local.sValues(1),V.local.sSQL)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.local.sSQL)
+	
+	f.Intrinsic.Control.If(v.Caller.Switches,=,"KAN")
+		F.Intrinsic.Variable.LoadUDTFromRecordset("con","rst",V.uGlobal.uLabelBin,True,1000)
+	f.Intrinsic.Control.Else
+		F.Intrinsic.Variable.LoadUDTFromRecordset("con","rst",V.uGlobal.uLabel,True,1000)
+	F.Intrinsic.Control.EndIf
+	
+	F.ODBC.con!rst.Close
+F.Intrinsic.Control.Next(V.Local.i)
+
+F.Intrinsic.Debug.Stop
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("SearchList_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.SearchList.End
+
+Program.Sub.Getpartsrev.Start
+F.Intrinsic.Control.SetErrorHandler("Getpartsrev_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+V.Local.sSql.Declare(String)
+V.Local.sPart01.Declare(String)
+V.Local.sPart02.Declare(String)
+
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'
+
+
+f.Intrinsic.String.Build("Select Top 1 Part,Right(Part,3) As rev from v_INVENTORY_MSTR Where  Left(Part,17)='{0}' Order By Right(Part,3) Desc",v.Args.part1, V.Local.sSql)
+F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.local.sSQL)
+F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,<>,True)
+	V.Local.sPart01.Set(v.ODBC.con!rst.FieldVal!Part)
+f.Intrinsic.Control.EndIf
+f.ODBC.con!rst.Close 
+
+F.Intrinsic.Control.If(V.args.part1,<>,V.args.part2)
+	f.Intrinsic.String.Build("Select Top 1 Part,Right(Part,3) As rev from v_INVENTORY_MSTR Where Left(Part,17)='{0}' Order By Right(Part,3) Desc",v.Args.part2, V.Local.sSql)
+	F.ODBC.Connection!con.OpenLocalRecordsetRO("rst",V.local.sSQL)
+	F.Intrinsic.Control.If(V.ODBC.con!rst.EOF,<>,True)
+		V.Local.sPart02.Set(v.ODBC.con!rst.FieldVal!Part)
+	f.Intrinsic.Control.EndIf
+	f.ODBC.con!rst.Close 
+f.Intrinsic.Control.else
+	V.Local.sPart02.Set(V.Local.sPart01)
+f.Intrinsic.Control.EndIf
+
+Function.Intrinsic.Variable.AddRV("Part01",V.Local.sPart01,"Part02",V.Local.sPart02)
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Getpartsrev_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Getpartsrev.End
+
+Program.Sub.PartBrowser.Start
+F.Intrinsic.Control.SetErrorHandler("PartBrowser_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sRet.Declare(string)
+Variable.Local.sTemp.Declare(string)
+Variable.Local.sTitles.Declare(string)
+Variable.Local.iWidths.Declare(long)
+V.Local.sPart01.Declare(String)
+ 
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+
+Function.Intrinsic.String.Split("Part*!*Location*!*Description*!*Bin","*!*",variable.local.sTitles)
+Function.Intrinsic.String.Split("1000*!*800*!*3000*!*800","*!*",variable.local.iWidths)
+Function.Intrinsic.UI.Browser("Select a Part","con","select part,location,description,Bin from v_INVENTORY_MSTR where bin <> '' and product_line = '' ",Variable.Local.sTitles,Variable.Local.iWidths,Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+ Function.Intrinsic.UI.Msgbox("No Part was selected!")
+ Function.Intrinsic.Variable.AddRV("Part01","")
+Function.Intrinsic.Control.Else
+ Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+ Function.Intrinsic.Variable.AddRV("Part01",Variable.Local.sRet(0))
+Function.Intrinsic.Control.EndIf
+
+
+
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("PartBrowser_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.PartBrowser.End
+
+Program.Sub.Binbrowser.Start
+F.Intrinsic.Control.SetErrorHandler("Binbrowser_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Variable.Local.sRet.Declare(string)
+Variable.Local.sTemp.Declare(string)
+Variable.Local.sTitles.Declare(string)
+Variable.Local.iWidths.Declare(long)
+V.Local.sPart01.Declare(String)
+ 
+
+'F.Intrinsic.Debug.InvokeDebugger
+'
+'F.Intrinsic.Debug.Stop
+
+
+Function.Intrinsic.String.Split("Bin*!*Location*!*Description","*!*",variable.local.sTitles)
+Function.Intrinsic.String.Split("1000*!*800*!*3000","*!*",variable.local.iWidths)
+Function.Intrinsic.UI.Browser("Select a Bin","con","select Bin,Location,Bin_Description from v_INVENTORY_MSTR join v_BIN_MASTER on v_INVENTORY_MSTR.Bin = v_BIN_MASTER.Bin and v_INVENTORY_MSTR.location = v_BIN_MASTER.location where v_BIN_MASTER.Bin <> '' and product_line = '' ",Variable.Local.sTitles,Variable.Local.iWidths,Variable.Local.sRet)
+Function.Intrinsic.Control.If(Variable.Local.sRet,"=","***CANCEL***")
+ Function.Intrinsic.UI.Msgbox("No Bin was selected!")
+ Function.Intrinsic.Variable.AddRV("Part01","")
+Function.Intrinsic.Control.Else
+ Function.Intrinsic.String.Split(Variable.Local.sRet,"*!*",Variable.Local.sRet)
+ Function.Intrinsic.Variable.AddRV("Part01",Variable.Local.sRet(0))
+Function.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Binbrowser_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GCG_4240_LabelsPreproc.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+
+Program.Sub.Binbrowser.End
+
+Program.Sub.Comments.Start
+${$0$}$$}$RLK$}$12/6/2016 12:57:38 PM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$Upload BOM from SpreadSheet
+Program.Sub.Comments.End
+
+Program.Sub.ScreenSS.Start
+SS_Form1{{CAPTION::Crew Schedule
+SS_Form1.CTRL{{NAME::dtp_BegDate\\TYPE::6\\CAPTION::Beginning Date\\TABSTOP::1\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::dtp_EndDate\\TYPE::6\\CAPTION::Ending Date\\TABSTOP::2\\GROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::chk_AllDates\\TYPE::9\\CAPTION::All Dates\\TABSTOP::3\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::txt_BegWC\\TYPE::2\\CAPTION::Beginning Work Center\\RANGE::lvw_WC\\TABSTOP::4\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::txt_EndWC\\TYPE::2\\CAPTION::Ending Work Center\\RANGE::lvw_WC\\TABSTOP::5\\GROUP::2\\BROWSER::1\\SIZE::1
+SS_Form1.CTRL{{NAME::chk_AllWC\\TYPE::9\\CAPTION::All Work Centers\\TABSTOP::6\\GROUP::-1\\SUBGROUP::1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::lvw_WC\\TYPE::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+SS_Form1.CTRL{{NAME::cmdPrint\\TYPE::5\\CAPTION::Print\\TABSTOP::7\\GROUP::-1\\BROWSER::0\\SIZE::1
+
+Program.Sub.ScreenSS.End
